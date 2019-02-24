@@ -18,7 +18,7 @@ public class ThirdPageActivity extends BaseActivity implements View.OnClickListe
         //setContentView(R.layout.activity_third_page);
         LayoutInflater.from(this).inflate(R.layout.activity_third_page, mContainer, true);
         mHeader.setText("Third Page");
-        StackSingleton.getInstance().setCurrentClass(ThirdPageActivity.class);
+        StackSingleton.getInstance().addCurrentClass(this);
         pageOneButton = findViewById(R.id.pageOneButton);
         pageTwoButton = findViewById(R.id.pageTwoButton);
         pageFourButton = findViewById(R.id.pageFourButton);

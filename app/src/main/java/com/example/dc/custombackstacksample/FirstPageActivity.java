@@ -17,7 +17,7 @@ public class FirstPageActivity extends BaseActivity implements View.OnClickListe
         //setContentView(R.layout.activity_first);
         LayoutInflater.from(this).inflate(R.layout.activity_first, mContainer, true);
         mHeader.setText("First Page");
-        StackSingleton.getInstance().setCurrentClass(FirstPageActivity.class);
+        StackSingleton.getInstance().addCurrentClass(this);
         pageTwoButton = findViewById(R.id.pageTwoButton);
         pageThreeButton = findViewById(R.id.pageThreeButton);
 

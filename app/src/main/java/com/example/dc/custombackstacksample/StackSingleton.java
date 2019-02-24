@@ -1,5 +1,7 @@
 package com.example.dc.custombackstacksample;
 
+import android.app.Activity;
+
 import java.util.Stack;
 
 class StackSingleton {
@@ -13,9 +15,9 @@ class StackSingleton {
         return mInstance;
     }
 
-    void setCurrentClass(Class<?> currentClass) {
-        if (StackSingleton.getInstance().isStackEmpty() || StackSingleton.getInstance().getTopClass() != currentClass) {
-            stack.push(currentClass);
+    void addCurrentClass(Activity activity) {
+        if (StackSingleton.getInstance().isStackEmpty() || StackSingleton.getInstance().getTopClass() != activity.getClass()) {
+            stack.push(activity.getClass());
         }
     }
 

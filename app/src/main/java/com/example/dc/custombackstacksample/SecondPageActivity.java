@@ -17,7 +17,7 @@ public class SecondPageActivity extends BaseActivity implements View.OnClickList
         //setContentView(R.layout.activity_second_page);
         LayoutInflater.from(this).inflate(R.layout.activity_second_page, mContainer, true);
         mHeader.setText("Second Page");
-        StackSingleton.getInstance().setCurrentClass(SecondPageActivity.class);
+        StackSingleton.getInstance().addCurrentClass(this);
         pageOneButton = findViewById(R.id.pageOneButton);
         pageThreeButton = findViewById(R.id.pageThreeButton);
 
